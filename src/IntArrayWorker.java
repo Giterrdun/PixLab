@@ -84,5 +84,31 @@ public class IntArrayWorker {
 			}
 		}
 	}
+	
+	public int getCount(int value){
+		int count = 0;
+		for (int[] rowArray : matrix){
+			for(int item :rowArray){
+				if (item == value){
+					count = count + 1;
+				}
+			}
+		}
+		return count;
+		
+	
+}
+	
+	public int getLargest(){
+		int largest = 0;
+		for (int[] rowArray : matrix){
+			for(int item :rowArray){
+				if(item > largest){
+					largest = item;
+				}
+			}
+		}
+		return largest;
+	}
 
 }
