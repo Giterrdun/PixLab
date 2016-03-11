@@ -775,5 +775,7 @@ public class SimplePicture implements DigitalPicture {
 		String output = "Simple Picture, filename " + fileName + " height " + getHeight() + " width " + getWidth();
 		return output;
 	}
+	
+	
 
 } // end of SimplePicture class

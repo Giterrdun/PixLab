@@ -4,7 +4,7 @@
 
 Fork and clone the [PixLab repo](http://github.com/mvhs-apcs/PixLab).
 
-```
+`
 $ git fetch origin
 $ git checkout a1
 ```
