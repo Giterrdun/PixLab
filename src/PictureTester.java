@@ -123,6 +123,21 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testEdgeDetectionTopToBot()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.edgeDetectionTopToBot(10);
+    swan.explore();
+  }
+  
+  public static void testEdgeDetectionAlg()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.edgeDetectionAlg(10);
+    swan.explore();
+  }
+  
+  
   public static void testCopy2(){
 	  Picture swan = new Picture ("swan.jpg");
 	  Picture wall = new Picture("wall.jpg");
@@ -157,7 +172,9 @@ public class PictureTester
     //testCollage();
 //    testCopy();
 //    testCopy2();
-	  testMyCollage();
+//	  testMyCollage();
+//	  testEdgeDetectionTopToBot();
+	  testEdgeDetectionAlg();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();

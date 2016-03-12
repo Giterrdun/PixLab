@@ -380,6 +380,41 @@ public class Picture extends SimplePicture {
 			}
 		}
 	}
+	public void edgeDetectionTopToBot(int edgeDist) {
+		Pixel topPixel = null;
+		Pixel botPixel = null;
+		Pixel[][] pixels = this.getPixels2D();
+		Color botColor = null;
+		for (int row = 0; row < pixels.length - 1; row++) {
+			for (int col = 0; col < pixels[0].length - 1; col++) {
+				topPixel = pixels[row][col];
+				botPixel = pixels[row + 1][col];
+				botColor = botPixel.getColor();
+				if (topPixel.colorDistance(botColor) > edgeDist)
+					topPixel.setColor(Color.BLACK);
+				else
+					topPixel.setColor(Color.WHITE);
+			}
+		}
+	}
+	
+	public void edgeDetectionAlg(int edgeDist){
+		Pixel topLeftPixel = null;
+		Pixel botRightPixel = null;
+		Pixel[][] pixels = this.getPixels2D();
+		Color rightColor = null;
+		for (int row = 0; row < pixels.length ; row++) {
+			for (int col = 0; col < (pixels[0].length - 1) ; col++) {
+				topLeftPixel = pixels[row][col];
+				botRightPixel = pixels[row][col + 1];
+				rightColor = botRightPixel.getColor();
+				if (topLeftPixel.colorDistance(rightColor) > edgeDist)
+					topLeftPixel.setColor(Color.BLACK);
+				else
+					topLeftPixel.setColor(Color.WHITE);
+			}
+		}
+	}
 
 	/*
 	 * Main method for testing - each class in Java can have a main method
